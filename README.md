@@ -1,26 +1,66 @@
-## Tech stack :
+## 🔢 Counter State App
+## 📄 Description 
+A simple counter app where users can increase or decrease the count by 1 or 10 using buttons.
+  
+## 🛠️ Tech Stack 
+ - **React** 
+ - **Next.js**
+ - **Tailwind CSS** 
+ - **Shadcn**
+ - **Lucide Icons** 
+ 
+## ✨ Features 
+- **Change Theme:** Users can choose between light mode and dark mode to make the app easier to use and match their style.
 
-- **React :** React is an open-source JavaScript library for building user interfaces.
-- **Next.js :** Next.js is a react's production-grate framework. designed for building highly performant and scalable web applications.
-- **TailwindCSS :** Tailwind CSS is a utility-first CSS framework designed for rapidly building custom user interfaces.
-- **Shadcn :** Offering a collection of customizable, accessible, and reusable components.
-- **Lucide Icons :** Provides a consistent and customizable set of vector (SVG) icons.
+- **Navigation Links:** A responsive navigation bar allows users to switch between three counter types, built with Next.js `Link` for fast client-side routing and improved performance. 
 
-## Features :
+- **Counter Value Display:** Each counter displays the current value, with real-time updates using `useState()` to ensure smooth user interaction.
+-  **Three Types of Counter:**
+    - **Basic Counter:** Simple +1 and -1 functionality.
+    - **Intermediate Counter:** Includes +10 and -10 buttons for faster increments.
+    - **Expert Counter:** Adds logic to disable buttons and make sure values stay within allowed limits, preventing race conditions and invalid states.
+ 
+## 🧠 Project Breakdown
 
-- **Dark Mode:** To update the application's theme.
-- **Navigation Links :** Routing between three distinct pages .
-- **Counter Value Display :** Real-time display of counter values.
-- **Three Types of Counter :**
-  _**Basic Counter :** Simple increment/decrement functionality.
-  _**Advanced Counter :** Simple increment/decrement functionality along with two additional buttons for increasing or decreasing the count by 10. \***Expert Counter :** Implements count limits, button disabling.
+  - I have created three different counters on three different pages.
+  
+  - To go to each page, I have put the page links in the Navigation menu and used the Next.js `Link` component to load the page quickly.
+  
+  - Each counter is a separate part, so I made separate components for them.
+  
+ - I used the card component and button component of `Shadcn` (A Lightweight Code Distribution System) to create the counter's card.
+ 
+ - I used `useState()` to update the counter value instantly when a button is clicked.
+ 
+ - I used the `useState` updater function within a separate helper function to improve code readability.
+ 
+ - In the expert counter, I’ve implemented both a button disable mechanism and an  `if` statement to enforce the count limit, providing double protection to prevent issues like race conditions.
 
-## Some Points :
+## 🚀 Getting Started
 
-- I have created three different counters on three different pages.
-- To go to each page, I have put the page links in the Navigation menu and used the Next.js `Link` component to load the page quickly.
-- Each counter is a separate part, so I made separate components for them.
-- I used the card component and button component of `Shadcn` (A Lightweight Code Distribution System) to create the counter's card.
-- I have used local state( `useState()` ) so that when the button is clicked the value of the counter display is updated.
-- I used the `useState` updater function within a separate helper function to improve code readability.
-- In the expert counter, I’ve implemented both a button disable mechanism and an `if` statement to enforce the count limit, providing double protection to prevent issues like race conditions.
+To run this project locally,  follow these steps:
+
+### 1. Install Dependencies
+Install all required packages using your preferred package manager:
+```bash
+# With npm
+npm install
+
+# With yarn
+yarn install
+
+# With pnpm
+pnpm install
+```
+### 2. Start the Development Server
+Once dependencies are installed, launch the local server using one of the following commands:
+```bash
+# With npm
+npm run dev
+
+# With yarn
+yarn dev
+
+# With pnpm
+pnpm dev
+```
